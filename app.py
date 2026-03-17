@@ -17,7 +17,7 @@ st.set_page_config(page_title="我們的減肥大計", page_icon="🥗")
 # --- 側邊欄：體重紀錄 ---
 with st.sidebar:
     st.header("⚖️ 今日體重回報")
-    current_user = st.radio("你是誰？", ["冠瑋", "女友"])
+    current_user = st.radio("你是誰？", ["冠瑋", "柯彤"])
     weight = st.number_input("今日體重 (kg)", min_value=30.0, max_value=150.0, step=0.1)
     if st.button("紀錄體重"):
         new_data = pd.DataFrame([[datetime.now().strftime("%Y-%m-%d"), current_user, weight, "體重紀錄"]], 
